@@ -1,0 +1,46 @@
+<div class="jumbotron text-center">
+	<h1>Information</h1>
+
+  <p>{{ message }}</p>
+	
+<div ng-controller="infoController">
+	<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <form ng-submit="addinformation()"
+        style="margin-top:30px;">
+        <h3>Gender</h3>
+
+        <div class="form-group" align="center">
+          <select ng-model="formData.paymentOptions" class="form-control" ng-show="formData.paymentOptions" ng-options="option.name for option in options" ng-style="{'width': 100 + 'px'}">
+          </select>
+        </div>
+
+         <h4> Are you happy at your job? </h4>
+         <div class="form-group" align="center">
+          <select ng-model="formData.paymentOptions2" class="form-control" ng-show="formData.paymentOptions2" ng-options="option.name for option in options2" ng-style="{'width': 100 + 'px'}">
+          </select>
+         </div>
+
+
+        <h4> Position </h4>
+         <div class="form-group" align="center">
+          <select ng-model="formData.paymentOptions1" class="form-control" ng-show="formData.paymentOptions1" ng-options="option.name for option in options1" ng-style="{'width': 300 + 'px'}">
+          </select>
+         </div>
+
+        
+         <h4> Salary </h4>
+        <div class="form-group" align="center">
+          <input type="number"
+          class="form-control"
+          placeholder="Amount"
+          ng-model="formData.amount"
+          ng-style="{'width': 100 + 'px'}"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>

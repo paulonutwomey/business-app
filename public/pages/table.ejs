@@ -1,0 +1,41 @@
+<div class="jumbotron text-center">
+	<h1>Search Employee</h1>
+	
+	<p>{{ message }}</p>
+
+  <div ng-controller="informationsController as list">
+	<table align="center" valign="middle">
+  Search: <input type="text" placeholder="Search Employee" ng-model="searchText" />
+
+	  <tbody ng-repeat="information in informations | filter:searchText">
+        <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
+        	
+              
+             <td> 
+
+             <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{information.paymenttype}}</span>
+         	</td>
+          <td>
+          <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{information.paymenttype2}}</span>
+          </td>
+          <td>
+          <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{information.paymenttype1}}</span>
+          </td>
+
+             <td>
+            <span class="glyphicon glyphicon-euro"></span> 
+            {{information.amount}}  
+    		</td>
+ 			<td>
+      
+      <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
+
+    
+        
+        </span>    
+             </td>
+    	</tr>
+      </tbody>
+    </table> 
+  </div>
+</div>
